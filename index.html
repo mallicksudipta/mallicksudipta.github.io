@@ -9,17 +9,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-	
-	var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-AThdsVVIo2wC_CunJ6nv-bbuUkqefnNx/exec";
-	$(document).ready(function() {
-		$.getJSON(SCRIPT_URL + "?callback1=?", {
-			method : "populate_list",
-			email:$('#exampleInputEmail1').val(),
-			password:$('#exampleInputPassword1').val()
-		}, function(data) {
-			alert(JSON.stringify(data));
-		});
+var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-AThdsVVIo2wC_CunJ6nv-bbuUkqefnNx/exec";
+function validateLogin(){
+	$.getJSON(SCRIPT_URL, {
+		email:$('#exampleInputEmail1').val(),
+		password:$('#exampleInputPassword1').val()
+	}, function(data) {
+		alert(JSON.stringify(data));
 	});
+}
 </script>
 
 </head>
@@ -42,7 +40,7 @@
 			<label class="form-check-label" for="exampleCheck1">Check me
 				out</label>
 		</div>
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<button type="submit" class="btn btn-primary" onClick="validateLogin();">Submit</button>
 	</form>
 </body>
 </html>
