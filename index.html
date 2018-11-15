@@ -11,8 +11,7 @@
 <script type="text/javascript">
 var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-AThdsVVIo2wC_CunJ6nv-bbuUkqefnNx/exec";
 function validateLogin(){
-	alert(1);
-	$.getJSON(SCRIPT_URL, {
+	$.getJSON(SCRIPT_URL + "?callback=?", {
 		email:$('#exampleInputEmail1').val(),
 		password:$('#exampleInputPassword1').val()
 	}, function(data) {
