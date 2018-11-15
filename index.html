@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.5.13.min.css" rel="stylesheet"><style></style><style type="text/css">/* Chart.js */
-@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <script type="text/javascript">
-	//https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-AThdsVVIo2wC_CunJ6nv-bbuUkqefnNx/exec
-    var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-AThdsVVIo2wC_CunJ6nv-bbuUkqefnNx/exec";
-$(document).ready(function() {
-    $.getJSON(SCRIPT_URL+"?callback=?",
-              {method:"populate_list"},
-              function (data) { 
-                alert(JSON.stringify(data)); 
-              });
-});
-        </script>
-    
-    </head>
+	var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-AThdsVVIo2wC_CunJ6nv-bbuUkqefnNx/exec";
+	$(document).ready(function() {
+		$.getJSON(SCRIPT_URL + "?callback=?", {
+			method : "populate_list"
+		}, function(data) {
+			alert(JSON.stringify(data));
+		});
+	});
+</script>
+
+</head>
 <body>
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+	<form>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label> <input
+				type="email" class="form-control" id="exampleInputEmail1"
+				aria-describedby="emailHelp" placeholder="Enter email"> <small
+				id="emailHelp" class="form-text text-muted">We'll never
+				share your email with anyone else.</small>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">Password</label> <input
+				type="password" class="form-control" id="exampleInputPassword1"
+				placeholder="Password">
+		</div>
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Check me
+				out</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
 </body>
 </html>
