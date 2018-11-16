@@ -12,7 +12,7 @@
 var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-AThdsVVIo2wC_CunJ6nv-bbuUkqefnNx/exec";
 	$(document).ready(function() {
     $.getJSON(SCRIPT_URL+"?callback=?",
-              {method:"populate_list"},
+              {method:"populate_list", email:$('#exampleInputEmail1').val(), password:$('#exampleInputPassword1').val()},
               function (data) { 
                 alert(JSON.stringify(data)); 
               });
