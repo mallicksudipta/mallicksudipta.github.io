@@ -13,21 +13,12 @@ var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-ATh
 	$(document).ready(function() {
 		$('#loginSubmit').click(function() {
     			$.getJSON(SCRIPT_URL+"?callback=?",
-              		{method:"populate_list", email:$('#exampleInputEmail1').val(), password:$('#exampleInputPassword1').val()},
+              		{email:$('#exampleInputEmail1').val(), password:$('#exampleInputPassword1').val()},
               		function (data) { 
                 		alert(JSON.stringify(data)); 
               		});
 		});
 });
-// function validateLogin(){
-// 	$.getJSON(SCRIPT_URL + "?callback=?", {
-// 		method:"populate_list",
-// 		email:$('#exampleInputEmail1').val(),
-// 		password:$('#exampleInputPassword1').val()
-// 	}, function(data) {
-// 		alert(JSON.stringify(data)); 
-// 	});
-// }
 </script>
 
 </head>
