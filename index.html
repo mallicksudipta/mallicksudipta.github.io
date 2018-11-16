@@ -11,13 +11,13 @@
 <script type="text/javascript">
 var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-AThdsVVIo2wC_CunJ6nv-bbuUkqefnNx/exec";
 	$(document).ready(function() {
-		function validateLogin(){
-    $.getJSON(SCRIPT_URL+"?callback=?",
-              {method:"populate_list", email:$('#exampleInputEmail1').val(), password:$('#exampleInputPassword1').val()},
-              function (data) { 
-                alert(JSON.stringify(data)); 
-              });
-		}
+		$('#loginSubmit').click(function() {
+    			$.getJSON(SCRIPT_URL+"?callback=?",
+              		{method:"populate_list", email:$('#exampleInputEmail1').val(), password:$('#exampleInputPassword1').val()},
+              		function (data) { 
+                		alert(JSON.stringify(data)); 
+              		});
+		});
 });
 // function validateLogin(){
 // 	$.getJSON(SCRIPT_URL + "?callback=?", {
@@ -50,7 +50,7 @@ var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1KvbttKF9Cp5qekD-ATh
 			<label class="form-check-label" for="exampleCheck1">Check me
 				out</label>
 		</div>
-		<button type="submit" class="btn btn-primary" onClick="validateLogin();">Submit</button>
+		<input id="loginSubmit" type="button" class="btn btn-primary">Submiting</button>
 	</form>
 </body>
 </html>
